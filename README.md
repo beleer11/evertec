@@ -3,29 +3,20 @@
 _Prueba de desarrollo para Evertec._
 
 
-### Requisitos
-
-_Ambiente requerido_
-
-- Php 7.2.0 con phpCli habilitado para la ejecución de comando.
-- Mysql 5.7.19.
-- Composer 
-- Extensión pdo_sqlite habilitada.
-
 ### Instalación
 
-1. Clonar el repositorio en el folder del servidor web en uso o en el de su elección, **este folder debe tener permisos para que php se pueda ejecutar por CLI y permisos de lectura y escritura para el archivo .env**.
+1. Clonar el repositorio.
 
 ```sh 
 git clone https://github.com/beleer11/evertec.git
 ```
 
-2. Instalar paquetes ejecutando en la raíz del folder.
+2. Instalar dependencias.
 
 ```sh 
 composer install
 ```
-3. Crear BD con COLLATE 'utf8mb4_general_ci', ejemplo.
+3. Crear BD, ejemplo.
 
 ```sh 
 `CREATE DATABASE evertec COLLATE 'utf8mb4_general_ci';`
