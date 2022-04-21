@@ -28,7 +28,6 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -41,7 +40,6 @@ class OrderController extends Controller
      * Almacena una nueva orden.
      *
      * @param  StoreOrder  $request Request con la data y from request para validacion.
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreOrder $request)
     {
@@ -63,7 +61,6 @@ class OrderController extends Controller
      * Muestra el detalle de una orden.
      *
      * @param  int  $idOrder Id de la orden.
-     * @return \Illuminate\Http\Response
      */
     public function show($idOrder)
     {
@@ -84,7 +81,6 @@ class OrderController extends Controller
      * Iniciar un pago.
      *
      * @param  Order $order Modelo para pagar.
-     * @return \Illuminate\Http\Response
      */
     public function pay(Order $order)
     {
@@ -95,7 +91,7 @@ class OrderController extends Controller
         if ($order->status != 'CREATED') {
             return redirect()->route("orders.show", ['order' => $order->id]);
         }
-        
+
         $transaction = $order->getLastTransaction();
         if (! $transaction || ($transaction->current_status != "PENDING" && $transaction->current_status != "CREATED")) {
             $response = Payment::pay('place_to_pay', $order);

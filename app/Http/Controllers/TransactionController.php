@@ -27,8 +27,6 @@ class TransactionController extends Controller
 
     /**
      * Recibe el informe de un pago.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function receive($gateway, $uuid, Request $request)
     {
@@ -48,8 +46,6 @@ class TransactionController extends Controller
     }
     /**
      * Recibe el informe de un pago.
-     *
-     * @return \Illuminate\Http\Response
      */
     public static function updateStatus(Transaction $transaction)
     {
@@ -62,7 +58,7 @@ class TransactionController extends Controller
                 ]),
             ];
         }
-        
+
         if (! $response->success) {
             return [
                 'success' => false,
