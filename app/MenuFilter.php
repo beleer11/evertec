@@ -8,7 +8,7 @@ use Spatie\Permission\Models\Permission;
 
 class MenuFilter implements FilterInterface
 {
-    public function transform($item)
+    public function transform($item, Builder $builder)
     {
         if (auth()->user()) {
             if (in_array('SuperAdministrator', auth()->user()->getRoles())) {
