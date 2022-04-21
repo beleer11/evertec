@@ -1,9 +1,9 @@
-# Prueba de desarrollo de una tienda con método de pago Place To Pay.
+# Prueba de una tienda con método de pago Place To Pay.
 
 _Prueba de desarrollo para Evertec._
 
 
-### Pre-requisitos
+### requisitos
 
 _Ambiente requerido_
 
